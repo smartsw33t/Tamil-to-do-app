@@ -1,4 +1,4 @@
-const STORAGE_KEY = "vanilla-js-todo-app.todos";
+const STORAGE_KEY = "tamil-todo-app.todos";
 const DELETE_ANIMATION_MS = 280;
 const FILTERS = {
   ALL: "all",
@@ -23,7 +23,7 @@ function getRequiredElement(selector) {
   const element = document.querySelector(selector);
 
   if (!element) {
-    throw new Error(`Missing required element: ${selector}`);
+    throw new Error(`தேவையான பகுதி கிடைக்கவில்லை: ${selector}`);
   }
 
   return element;
@@ -33,7 +33,7 @@ function getRequiredElements(selector) {
   const elements = document.querySelectorAll(selector);
 
   if (elements.length === 0) {
-    throw new Error(`Missing required elements: ${selector}`);
+    throw new Error(`தேவையான பகுதிகள் கிடைக்கவில்லை: ${selector}`);
   }
 
   return elements;
@@ -109,9 +109,8 @@ function getVisibleTodos() {
 function updateMeta() {
   const activeTodoCount = todos.filter((todo) => !todo.completed).length;
   const completedTodoCount = todos.length - activeTodoCount;
-  const taskLabel = activeTodoCount === 1 ? "task" : "tasks";
 
-  todoCount.textContent = `${activeTodoCount} ${taskLabel} left`;
+  todoCount.textContent = `${activeTodoCount} செய்ய வேண்டியவை`;
   emptyState.classList.toggle("visible", getVisibleTodos().length === 0);
   clearButton.disabled = completedTodoCount === 0;
 }
@@ -135,14 +134,20 @@ function renderTodo(todo) {
   completeButton.textContent = "✓";
   completeButton.setAttribute(
     "aria-label",
-    todo.completed ? "Mark task as active" : "Mark task as completed",
+    todo.completed
+      ? "மீண்டும் செய்ய வேண்டியதாக மாற்றுக"
+      : "முடிந்ததாகக் குறித்திடுக",
   );
+  completeButton.title = todo.completed
+    ? "மீண்டும் செய்ய வேண்டியதாக மாற்றுக"
+    : "முடிந்ததாகக் குறித்திடுக";
 
   const trashButton = document.createElement("button");
   trashButton.type = "button";
   trashButton.className = "todo-action trash-btn";
   trashButton.textContent = "×";
-  trashButton.setAttribute("aria-label", "Delete task");
+  trashButton.setAttribute("aria-label", "செயலை நீக்குக");
+  trashButton.title = "நீக்குக";
 
   todoItem.append(statusDot, todoText, completeButton, trashButton);
 
