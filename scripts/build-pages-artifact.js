@@ -10,7 +10,7 @@ for (const item of requiredPaths) {
   const itemPath = path.join(root, item);
 
   if (!fs.existsSync(itemPath)) {
-    throw new Error(`Required file or directory is missing: ${item}`);
+    throw new Error(`தேவையான கோப்பு அல்லது கோப்புறை விடுபட்டுள்ளது: ${item}`);
   }
 }
 
@@ -34,4 +34,4 @@ copyIfExists("src", "src");
 copyIfExists("assets", "assets");
 copyIfExists("public", ".");
 
-console.log("Static Pages artifact created in .site/");
+console.log(".site/ கோப்புறையில் வெளியீட்டிற்கான கோப்புகள் வெற்றிகரமாக உருவாக்கப்பட்டன.");
