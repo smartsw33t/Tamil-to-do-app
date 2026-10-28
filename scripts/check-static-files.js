@@ -26,7 +26,7 @@ async function main() {
   }
 
   if (missingFiles.length > 0) {
-    throw new Error(`Missing required files: ${missingFiles.join(", ")}`);
+    throw new Error(`தேவையான கோப்புகள் காணப்படவில்லை: ${missingFiles.join(", ")}`);
   }
 
   const indexHtml = await readFile("index.html", "utf8");
@@ -41,11 +41,16 @@ async function main() {
 
   if (missingReferences.length > 0) {
     throw new Error(
-      `Missing index.html references: ${missingReferences.join(", ")}`,
+      `index.html கோப்பில் இந்த பிணைப்புகள் விடுபட்டுள்ளன: ${missingReferences.join(", ")}`,
     );
   }
 
-  console.log("Static file check passed.");
+  // தமிழ் வலைப்பக்கக் குறிச்சொல் சரிபார்ப்பு
+  if (!indexHtml.includes('lang="ta"')) {
+    throw new Error('index.html கோப்பில் lang="ta" அமைவு இடம்பெறவில்லை.');
+  }
+
+  console.log("நிலையான கோப்புகள் மற்றும் பிணைப்புகள் வெற்றிகரமாகச் சரிபார்க்கப்பட்டன.");
 }
 
 main().catch((error) => {
