@@ -1,18 +1,18 @@
 <!doctype html>
-<html lang="en">
+<html lang="ta">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="A lightweight vanilla JavaScript todo app with localStorage persistence and GitHub Pages deployment."
+      content="சாதனத்திலேயே சேமிக்கப்படும் எளிய செய்யவேண்டியவை பட்டியல் செயலி."
     />
-    <title>Vanilla JS Todo App</title>
+    <title>செய்யவேண்டியவை</title>
     <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./src/styles/main.css" />
@@ -20,80 +20,51 @@
   </head>
   <body>
     <main class="app-shell" aria-labelledby="app-title">
-      <section class="hero-card">
-        <p class="eyebrow">Vanilla JavaScript · LocalStorage · GitHub Pages</p>
-        <h1 id="app-title">Local Todo List</h1>
-        <p class="hero-copy">
-          A small, dependency-free task list that runs in the browser and keeps
-          data on the device.
-        </p>
-        <dl class="scope-list" aria-label="Project scope">
-          <div>
-            <dt>No build step</dt>
-            <dd>Static HTML, CSS, and JavaScript</dd>
-          </div>
-          <div>
-            <dt>Local state</dt>
-            <dd>Saved with browser localStorage</dd>
-          </div>
-          <div>
-            <dt>Static deploy</dt>
-            <dd>Published through GitHub Pages</dd>
-          </div>
-        </dl>
-        <a
-          class="repo-link"
-          href="https://github.com/itkrivoshei/vanilla-js-todo-app"
-          target="_blank"
-          rel="noreferrer"
-        >
-          View source on GitHub
-        </a>
-      </section>
+      <section class="todo-card" aria-label="செய்யவேண்டியவை செயலி">
+        <h1 id="app-title" class="sr-only">செய்யவேண்டியவை பட்டியல்</h1>
 
-      <section class="todo-card" aria-label="Todo application">
         <form class="todo-form" autocomplete="off">
-          <label class="sr-only" for="todo-input">New todo</label>
+          <label class="sr-only" for="todo-input">புதிய செயல்</label>
           <input
             id="todo-input"
             class="todo-input"
             type="text"
             name="todo"
             maxlength="120"
-            placeholder="Add a task..."
-            aria-label="New todo"
+            placeholder="செய்ய வேண்டியதை நிரப்புக..."
+            aria-label="புதிய செயல்"
             required
           />
-          <button class="todo-button" type="submit">Add task</button>
+          <button class="todo-button" type="submit">சேர்த்திடுக</button>
         </form>
 
-        <div class="toolbar" aria-label="Todo filters">
-          <div class="filters" role="group" aria-label="Filter todos">
+        <div class="toolbar" aria-label="பட்டியல் பிரிவுகள்">
+          <div class="filters" role="group" aria-label="பிரிவுகள்">
             <button
               class="filter-button active"
               type="button"
               data-filter="all"
             >
-              All
+              அனைத்தும்
             </button>
             <button class="filter-button" type="button" data-filter="active">
-              Active
+              செய்யவேண்டியவை
             </button>
             <button class="filter-button" type="button" data-filter="completed">
-              Completed
+              முடிந்தவை
             </button>
           </div>
-          <button class="clear-button" type="button">Clear completed</button>
+          <button class="clear-button" type="button">முடிந்தவற்றைத் துடைத்திடுக</button>
         </div>
 
         <div class="todo-meta" aria-live="polite">
-          <span class="todo-count">0 tasks</span>
-          <span class="storage-note">Saved locally in this browser</span>
+          <span class="todo-count">0 செயல்கள்</span>
+          <span class="storage-note">இந்த உலாவியிலேயே சேமிக்கப்படுகிறது</span>
         </div>
 
-        <ul class="todo-list" aria-label="Todo items"></ul>
+        <ul class="todo-list" aria-label="செயல்கள் பட்டியல்"></ul>
 
-        <p class="empty-state">No tasks yet. Add one to start.</p>
+        <p class="empty-state">செயல்கள் ஏதுமில்லை. புதிய ஒன்றைச் சேர்க்கவும்.</p>
       </section>
     </main>
   </body>
