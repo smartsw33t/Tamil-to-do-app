@@ -1,86 +1,45 @@
 <div align="center">
 
-# Vanilla JS Todo App
+# செய்யவேண்டியவை
 
-Zero-framework todo list with `localStorage` persistence, static validation, and GitHub Pages deployment.
+எந்தவொரு கூடுதல் கட்டமைப்புச் சுமையும் இன்றி, உலாவி சேமிப்பகத்தைக் கொண்டு நேரடியாக இயங்கும் எளிய தமிழ் செய்யவேண்டியவை பட்டியல் செயலி.
 
-[![Live app](https://img.shields.io/badge/live-app-2ea44f?style=for-the-badge&logo=githubpages&logoColor=white&labelColor=0f172a)](https://itkrivoshei.github.io/vanilla-js-todo-app/)
-[![CI](https://img.shields.io/github/actions/workflow/status/itkrivoshei/vanilla-js-todo-app/ci.yml?branch=main&style=for-the-badge&label=ci&logo=githubactions&logoColor=white&labelColor=0f172a)](https://github.com/itkrivoshei/vanilla-js-todo-app/actions/workflows/ci.yml)
-[![Deploy](https://img.shields.io/github/actions/workflow/status/itkrivoshei/vanilla-js-todo-app/deploy.yml?branch=main&style=for-the-badge&label=deploy&logo=githubactions&logoColor=white&labelColor=0f172a)](https://github.com/itkrivoshei/vanilla-js-todo-app/actions/workflows/deploy.yml)
-[![JavaScript](https://img.shields.io/badge/JavaScript-vanilla-f7df1e?style=for-the-badge&logo=javascript&logoColor=000&labelColor=0f172a)](src/scripts/app.js)
-[![License](https://img.shields.io/github/license/itkrivoshei/vanilla-js-todo-app?style=for-the-badge&labelColor=0f172a)](LICENSE)
+[![நேரலைத் தளம்](https://img.shields.io/badge/நேரலைத்_தளம்-2ea44f?style=for-the-badge&logo=githubpages&logoColor=white&labelColor=0f172a)](https://smartsw33t.github.io/Tamil-to-do-app/)
+[![ஜாவாஸ்கிரிப்ட்](https://img.shields.io/badge/ஜாவாஸ்கிரிப்ட்-தூய_JS-f7df1e?style=for-the-badge&logo=javascript&logoColor=000&labelColor=0f172a)](src/scripts/app.js)
+[![உரிமம்](https://img.shields.io/github/license/smartsw33t/Tamil-to-do-app?style=for-the-badge&labelColor=0f172a)](LICENSE)
 
 </div>
 
-## Overview
+## அறிமுகம்
 
-A static JavaScript todo application focused on simple browser state management, local persistence, validation, and automated GitHub Pages delivery.
+வெளிப்புற நிரலகங்கள் எதனையும் சாராமல், தூய ஜாவாஸ்கிரிப்ட் மற்றும் சிஎஸ்எஸ் கொண்டு உருவாக்கப்பட்ட இலகுவான வலைப் பயன்பாடு. இது நீங்கள் சேர்க்கும் பணிகளை உங்கள் உலாவியிலேயே பத்திரமாகச் சேமித்து வைக்கிறது.
 
-## Features
+## சிறப்பம்சங்கள்
 
-- Add, complete, delete, and filter tasks.
-- Clear completed tasks.
-- Persist tasks in browser `localStorage`.
-- Animate item removal.
-- Generate a static deployment artifact in `.site/`.
-- Validate required static files before deployment.
+- புதிய பணிகளைச் சேர்த்தல், முடித்ததாகக் குறித்தல் மற்றும் நீக்குதல்.
+- பிரிவுகளின் அடிப்படையில் வடிகட்டுதல் (அனைத்தும், செய்யவேண்டியவை, முடிந்தவை).
+- முடிந்த பணிகளை ஒரே கிளிக்கில் துடைத்தெடுத்தல்.
+- உலாவியின் உள்ளூர் சேமிப்பகம் வழியே சாதனத்திலேயே தகவல்களைத் தக்கவைத்தல்.
+- மென்மையான அசைவூட்டங்களுடன் கூடிய இடைமுகம்.
+- விசைப்பலகை மற்றும் திரைவாசிக்கும் கருவி பயன்படுத்த ஆதரவு.
 
-## Tech Stack
+## பயன்படுத்தப்பட்ட தொழில்நுட்பங்கள்
 
-| Area        | Tools                                                                        |
-| ----------- | ---------------------------------------------------------------------------- |
-| Language    | [Vanilla JavaScript](src/scripts/app.js)                                     |
-| Styling     | [CSS](src/styles/main.css)                                                   |
-| Markup      | [HTML](index.html)                                                           |
-| Persistence | Browser `localStorage`                                                       |
-| Checks      | ESLint, Prettier, static file validation                                     |
-| Hosting     | [GitHub Pages](https://itkrivoshei.github.io/vanilla-js-todo-app/)           |
-| Automation  | [GitHub Actions](https://github.com/itkrivoshei/vanilla-js-todo-app/actions) |
+| பிரிவு | கருவி |
+| --- | --- |
+| நிரலாக்க மொழி | [தூய ஜாவாஸ்கிரிப்ட்](src/scripts/app.js) |
+| வடிவமைப்பு | [சிஎஸ்எஸ்](src/styles/main.css) |
+| கட்டமைப்பு | [வலைப்பக்கக் குறியீடு](index.html) |
+| சேமிப்பகம் | உலாவியின் உள்ளூர் சேமிப்பகம் |
+| எழுத்துரு | நோட்டோ சான்ஸ் தமிழ் / நிர்மலா யுஐ |
+| இயங்குதளம் | [கிட்ஹப் பக்கங்கள்](https://smartsw33t.github.io/Tamil-to-do-app/) |
 
-## Run Locally
+## கணினியில் இயக்குதல்
+
+கணினியில் பதிவிறக்கம் செய்து நேரடியாக `index.html` கோப்பை எந்த உலாவியிலும் திறக்கலாம். அல்லது கட்டளை வரி வழியே இயக்க:
 
 ```bash
-git clone https://github.com/itkrivoshei/vanilla-js-todo-app.git
-cd vanilla-js-todo-app
+git clone [https://github.com/smartsw33t/Tamil-to-do-app.git](https://github.com/smartsw33t/Tamil-to-do-app.git)
+cd Tamil-to-do-app
 npm ci
 npm start
-```
-
-Open `http://localhost:4173`.
-
-## Project Structure
-
-```text
-index.html
-favicon.svg
-src/
-├── scripts/app.js
-└── styles/main.css
-scripts/
-├── build-pages-artifact.js
-└── check-static-files.js
-```
-
-## Scripts
-
-Scripts are defined in [`package.json`](package.json).
-
-| Command                | Description                                     |
-| ---------------------- | ----------------------------------------------- |
-| `npm run check`        | Validate required files and asset references    |
-| `npm run lint`         | Run ESLint                                      |
-| `npm run lint:fix`     | Apply ESLint fixes                              |
-| `npm run format`       | Format HTML, CSS, JS, workflows, and config     |
-| `npm run format:check` | Check formatting                                |
-| `npm run build`        | Generate `.site/` for GitHub Pages              |
-| `npm run verify`       | Run check, lint, format-check, and build        |
-| `npm start`            | Serve the repository with Python on port `4173` |
-
-## Deployment
-
-- [`.github/workflows/ci.yml`](.github/workflows/ci.yml) validates the app on pushes and pull requests to `main`.
-- [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) builds `.site/` and publishes it to [GitHub Pages](https://itkrivoshei.github.io/vanilla-js-todo-app/) on pushes to `main`.
-
-## License
-
-[GPL-3.0](LICENSE)
